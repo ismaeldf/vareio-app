@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Política de Privacidade — NutriTrack BR</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;max-width:720px;margin:48px auto;padding:0 20px;color:#222;line-height:1.6}
+  h1{font-size:28px;margin-bottom:4px}
+  h2{font-size:20px;margin-top:32px;color:#0c8e60}
+  h3{font-size:16px;margin-top:20px}
+  a{color:#0c8e60}
+  ul{padding-left:18px}
+  li{margin-bottom:6px}
+  .lang{display:flex;gap:12px;margin-bottom:8px;font-size:13px}
+  .lang a{padding:4px 10px;border-radius:6px;background:#f0f0f0;text-decoration:none}
+  .meta{color:#888;font-size:13px;margin-bottom:32px}
+  hr{margin:48px 0;border:0;border-top:2px solid #eee}
+  code{background:#f0f0f0;padding:1px 6px;border-radius:4px;font-size:13px}
+  .highlight{background:#e6f7ef;padding:16px;border-radius:10px;border-left:4px solid #0c8e60;margin:16px 0}
+</style>
+</head>
+<body>
+  <div class="lang">
+    <a href="index.html">← Início</a>
+    <a href="#ptbr">🇧🇷 PT-BR</a>
+    <a href="#en">🇺🇸 EN</a>
+    <a href="#es">🇪🇸 ES</a>
+  </div>
+
+  <a name="ptbr"></a>
+  <h1>Política de Privacidade</h1>
+  <p class="meta">NutriTrack BR · Última atualização: 12 de maio de 2026</p>
+
+  <div class="highlight">
+    <strong>TL;DR:</strong> Não coletamos seus dados. Tudo fica no seu iPhone ou no seu iCloud privado. Quando você usa funcionalidades de IA, seus dados vão direto pro provedor de IA escolhido com a sua própria chave — não passam por servidores nossos.
+  </div>
+
+  <h2>1. Quem somos</h2>
+  <p>NutriTrack BR é um aplicativo iOS desenvolvido como projeto individual por Jamal Melo. Email de contato: <a href="mailto:dev@coachecom.com">dev@coachecom.com</a>.</p>
+
+  <h2>2. Dados que NÃO coletamos</h2>
+  <p>Para sermos diretos: <strong>não coletamos nenhum dado pessoal seu</strong>. Especificamente:</p>
+  <ul>
+    <li>❌ Não pedimos email, senha ou cadastro</li>
+    <li>❌ Não temos servidor que recebe seus dados</li>
+    <li>❌ Não usamos Google Analytics, Firebase, Sentry, Crashlytics ou qualquer SDK de telemetria</li>
+    <li>❌ Não rastreamos seu uso entre apps (sem IDFA, sem App Tracking Transparency)</li>
+    <li>❌ Não compartilhamos dados com anunciantes ou terceiros</li>
+  </ul>
+
+  <h2>3. Dados que ficam no seu device</h2>
+  <p>Tudo que você registra fica armazenado <strong>localmente no seu iPhone</strong> via SwiftData (banco de dados nativo iOS):</p>
+  <ul>
+    <li>Refeições registradas (alimento, quantidade, horário)</li>
+    <li>Alimentos personalizados que você criar</li>
+    <li>Metas de calorias e macronutrientes</li>
+    <li>Medicamentos cadastrados</li>
+    <li>Foto de perfil (se você adicionar)</li>
+    <li>Nome / apelido</li>
+  </ul>
+  <p>Esses dados <strong>nunca saem do seu device</strong> a não ser que você ative explicitamente uma das opções abaixo.</p>
+
+  <h2>4. Integrações opcionais que você controla</h2>
+
+  <h3>4.1 Apple Saúde (HealthKit)</h3>
+  <p>Se você ativar, o app:</p>
+  <ul>
+    <li><strong>Lê</strong> peso e percentual de gordura do app Saúde (pra preencher seu perfil)</li>
+    <li><strong>Escreve</strong> calorias, proteínas, carboidratos, gorduras e fibras consumidas no app Saúde</li>
+  </ul>
+  <p>Esses dados ficam no <strong>seu app Saúde</strong>, não em servidor nosso. A Apple gerencia a privacidade segundo a política da Apple. Você pode desativar a qualquer momento em <code>Saúde → Compartilhamento → Apps</code>.</p>
+
+  <h3>4.2 Backup em iCloud</h3>
+  <p>Se você ativar backup automático, o app salva um arquivo CSV no seu iCloud Drive (pasta NutriTrack). Esse iCloud é <strong>seu</strong>; não temos acesso. A Apple gerencia conforme a política deles.</p>
+
+  <h3>4.3 IA (Foto / Voz / Busca por IA)</h3>
+  <p>O app oferece funcionalidades de IA opcionais:</p>
+  <ul>
+    <li><strong>Foto + IA</strong>: identifica alimentos por foto</li>
+    <li><strong>Voz + IA</strong>: registra refeição por áudio</li>
+    <li><strong>Busca com IA</strong>: encontra alimentos não listados na base</li>
+    <li><strong>OCR de rótulo</strong>: extrai info nutricional de embalagens</li>
+  </ul>
+  <p>Pra usar IA, você fornece a sua própria API key de um dos provedores suportados:</p>
+  <ul>
+    <li>Google Gemini (<a href="https://aistudio.google.com/apikey">aistudio.google.com</a>)</li>
+    <li>Anthropic Claude (<a href="https://console.anthropic.com/settings/keys">console.anthropic.com</a>)</li>
+    <li>OpenAI (<a href="https://platform.openai.com/api-keys">platform.openai.com</a>)</li>
+    <li>OpenRouter (<a href="https://openrouter.ai/keys">openrouter.ai</a>)</li>
+  </ul>
+  <p>Quando você usa IA:</p>
+  <ul>
+    <li>Sua imagem/voz/texto vai <strong>direto do seu device pro provedor escolhido</strong> via HTTPS</li>
+    <li><strong>Não passa por servidor nosso</strong> (não temos servidor)</li>
+    <li><strong>Não armazenamos</strong> a imagem ou texto após processamento</li>
+    <li>A API key fica guardada no <strong>Keychain criptografado</strong> do seu iPhone</li>
+  </ul>
+  <p>Cada provedor de IA tem sua própria política de privacidade. Consulte:</p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy">Google (Gemini)</a></li>
+    <li><a href="https://www.anthropic.com/privacy">Anthropic (Claude)</a></li>
+    <li><a href="https://openai.com/policies/row-privacy-policy/">OpenAI</a></li>
+    <li><a href="https://openrouter.ai/privacy">OpenRouter</a></li>
+  </ul>
+
+  <h2>5. Permissões iOS que o app pede</h2>
+  <ul>
+    <li><strong>Câmera</strong>: pra tirar foto de pratos (usada localmente + opcionalmente enviada à IA)</li>
+    <li><strong>Galeria</strong>: pra escolher foto da biblioteca</li>
+    <li><strong>Microfone</strong>: pra gravar voz</li>
+    <li><strong>Reconhecimento de fala</strong>: transcrição de voz (Apple, on-device)</li>
+    <li><strong>HealthKit</strong>: opcional, leitura/escrita de dados de saúde</li>
+    <li><strong>Notificações</strong>: lembretes de medicamentos (se você cadastrar)</li>
+  </ul>
+  <p>Cada permissão pode ser revogada em <code>Ajustes → NutriTrack BR</code>.</p>
+
+  <h2>6. Compras dentro do app (Premium)</h2>
+  <p>O Premium é vendido via <strong>StoreKit (App Store)</strong>. Não processamos pagamento; toda transação é gerenciada pela Apple. Não temos acesso aos seus dados de pagamento.</p>
+
+  <h2>7. Crianças</h2>
+  <p>O app não é direcionado a menores de 13 anos. Não coletamos intencionalmente dados de crianças.</p>
+
+  <h2>8. Mudanças nesta política</h2>
+  <p>Atualizações desta política são publicadas nesta página e a data de "Última atualização" é alterada. Em mudanças significativas, avisamos via update do app.</p>
+
+  <h2>9. Contato</h2>
+  <p>Dúvidas sobre privacidade: <a href="mailto:dev@coachecom.com">dev@coachecom.com</a>.</p>
+
+  <hr>
+
+  <a name="en"></a>
+  <h1>Privacy Policy (English)</h1>
+  <p class="meta">NutriTrack BR · Last updated: May 12, 2026</p>
+
+  <div class="highlight">
+    <strong>TL;DR:</strong> We don't collect your data. Everything stays on your iPhone or your private iCloud. When you use AI features, your data goes directly to your chosen AI provider using your own API key — never through our servers.
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>NutriTrack BR is an iOS app developed as an individual project by Jamal Melo. Contact: <a href="mailto:dev@coachecom.com">dev@coachecom.com</a>.</p>
+
+  <h2>2. Data we do NOT collect</h2>
+  <p>To be direct: <strong>we collect zero personal data</strong>. Specifically:</p>
+  <ul>
+    <li>❌ No email, password, or account required</li>
+    <li>❌ No server receives your data</li>
+    <li>❌ No Google Analytics, Firebase, Sentry, Crashlytics, or any telemetry SDK</li>
+    <li>❌ No cross-app tracking (no IDFA, no ATT)</li>
+    <li>❌ No data sharing with advertisers or third parties</li>
+  </ul>
+
+  <h2>3. Data stored on your device</h2>
+  <p>Everything you log is stored <strong>locally on your iPhone</strong> via SwiftData:</p>
+  <ul>
+    <li>Logged meals (food, quantity, time)</li>
+    <li>Custom foods you create</li>
+    <li>Calorie and macro goals</li>
+    <li>Medications you register</li>
+    <li>Profile photo (if you add one)</li>
+    <li>Name / nickname</li>
+  </ul>
+  <p>This data <strong>never leaves your device</strong> unless you explicitly enable one of the integrations below.</p>
+
+  <h2>4. Optional integrations you control</h2>
+
+  <h3>4.1 Apple Health (HealthKit)</h3>
+  <p>If enabled, the app:</p>
+  <ul>
+    <li><strong>Reads</strong> body weight and body fat % from Health (to populate your profile)</li>
+    <li><strong>Writes</strong> calories, protein, carbs, fat, fiber consumed to Health</li>
+  </ul>
+  <p>Data stays in <strong>your Health app</strong>, not on our server. Apple manages privacy per their policy. You can disable anytime in <code>Health → Sharing → Apps</code>.</p>
+
+  <h3>4.2 iCloud Backup</h3>
+  <p>If you enable automatic backup, the app saves a CSV file to your iCloud Drive (NutriTrack folder). That iCloud is <strong>yours</strong>; we have no access. Apple manages it per their policy.</p>
+
+  <h3>4.3 AI features (Photo / Voice / AI Search)</h3>
+  <p>Optional AI features:</p>
+  <ul>
+    <li><strong>Photo + AI</strong>: identifies foods by photo</li>
+    <li><strong>Voice + AI</strong>: logs meal by audio</li>
+    <li><strong>AI Search</strong>: finds foods not in the local database</li>
+    <li><strong>Label OCR</strong>: extracts nutrition info from packaging</li>
+  </ul>
+  <p>To use AI, you provide your own API key from one of the supported providers:</p>
+  <ul>
+    <li>Google Gemini (<a href="https://aistudio.google.com/apikey">aistudio.google.com</a>)</li>
+    <li>Anthropic Claude (<a href="https://console.anthropic.com/settings/keys">console.anthropic.com</a>)</li>
+    <li>OpenAI (<a href="https://platform.openai.com/api-keys">platform.openai.com</a>)</li>
+    <li>OpenRouter (<a href="https://openrouter.ai/keys">openrouter.ai</a>)</li>
+  </ul>
+  <p>When you use AI:</p>
+  <ul>
+    <li>Your image/voice/text goes <strong>directly from your device to your chosen provider</strong> via HTTPS</li>
+    <li><strong>Never through our server</strong> (we don't have one)</li>
+    <li>We <strong>do not store</strong> the image or text after processing</li>
+    <li>API key is kept in <strong>encrypted Keychain</strong> on your iPhone</li>
+  </ul>
+  <p>Each AI provider has their own privacy policy. See:</p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy">Google (Gemini)</a></li>
+    <li><a href="https://www.anthropic.com/privacy">Anthropic (Claude)</a></li>
+    <li><a href="https://openai.com/policies/row-privacy-policy/">OpenAI</a></li>
+    <li><a href="https://openrouter.ai/privacy">OpenRouter</a></li>
+  </ul>
+
+  <h2>5. iOS permissions requested</h2>
+  <ul>
+    <li><strong>Camera</strong>: take photos of meals (used locally + optionally sent to AI)</li>
+    <li><strong>Photo Library</strong>: choose photo from library</li>
+    <li><strong>Microphone</strong>: record voice</li>
+    <li><strong>Speech Recognition</strong>: on-device voice transcription (Apple)</li>
+    <li><strong>HealthKit</strong>: optional, read/write health data</li>
+    <li><strong>Notifications</strong>: medication reminders (if you register any)</li>
+  </ul>
+  <p>Each permission can be revoked in <code>Settings → NutriTrack BR</code>.</p>
+
+  <h2>6. In-app purchases (Premium)</h2>
+  <p>Premium is sold via <strong>StoreKit (App Store)</strong>. We do not process payments; all transactions are managed by Apple. We have no access to your payment data.</p>
+
+  <h2>7. Children</h2>
+  <p>The app is not directed to children under 13. We do not knowingly collect data from children.</p>
+
+  <h2>8. Changes to this policy</h2>
+  <p>Updates to this policy are published on this page and the "Last updated" date changes. For significant changes, we notify via app update.</p>
+
+  <h2>9. Contact</h2>
+  <p>Privacy questions: <a href="mailto:dev@coachecom.com">dev@coachecom.com</a>.</p>
+
+  <hr>
+
+  <a name="es"></a>
+  <h1>Política de Privacidad (Español)</h1>
+  <p class="meta">NutriTrack BR · Última actualización: 12 de mayo de 2026</p>
+
+  <div class="highlight">
+    <strong>Resumen:</strong> No recopilamos tus datos. Todo permanece en tu iPhone o en tu iCloud privado. Cuando usas funciones de IA, tus datos van directamente al proveedor de IA elegido usando tu propia clave — nunca pasan por nuestros servidores.
+  </div>
+
+  <h2>1. Quiénes somos</h2>
+  <p>NutriTrack BR es una app iOS desarrollada como proyecto individual por Jamal Melo. Contacto: <a href="mailto:dev@coachecom.com">dev@coachecom.com</a>.</p>
+
+  <h2>2. Datos que NO recopilamos</h2>
+  <p>Para ser directos: <strong>no recopilamos ningún dato personal</strong>. Específicamente:</p>
+  <ul>
+    <li>❌ No pedimos email, contraseña ni registro</li>
+    <li>❌ No tenemos servidor que reciba tus datos</li>
+    <li>❌ No usamos Google Analytics, Firebase, Sentry, Crashlytics ni ningún SDK de telemetría</li>
+    <li>❌ No rastreamos tu uso entre apps (sin IDFA, sin ATT)</li>
+    <li>❌ No compartimos datos con anunciantes o terceros</li>
+  </ul>
+
+  <h2>3. Datos almacenados en tu dispositivo</h2>
+  <p>Todo lo que registras se guarda <strong>localmente en tu iPhone</strong> vía SwiftData:</p>
+  <ul>
+    <li>Comidas registradas (alimento, cantidad, hora)</li>
+    <li>Alimentos personalizados que creas</li>
+    <li>Metas de calorías y macros</li>
+    <li>Medicamentos registrados</li>
+    <li>Foto de perfil (si la añades)</li>
+    <li>Nombre / apodo</li>
+  </ul>
+  <p>Estos datos <strong>nunca salen de tu dispositivo</strong> a menos que actives explícitamente una de las integraciones siguientes.</p>
+
+  <h2>4. Integraciones opcionales que tú controlas</h2>
+
+  <h3>4.1 Apple Salud (HealthKit)</h3>
+  <p>Si activas, la app:</p>
+  <ul>
+    <li><strong>Lee</strong> peso y % de grasa corporal de Salud (para llenar tu perfil)</li>
+    <li><strong>Escribe</strong> calorías, proteína, carbohidratos, grasa y fibra consumidos en Salud</li>
+  </ul>
+  <p>Los datos quedan en <strong>tu app Salud</strong>, no en servidor nuestro. Apple gestiona la privacidad según su política. Puedes desactivar en cualquier momento en <code>Salud → Compartir → Apps</code>.</p>
+
+  <h3>4.2 Backup en iCloud</h3>
+  <p>Si activas el backup automático, la app guarda un archivo CSV en tu iCloud Drive (carpeta NutriTrack). Ese iCloud es <strong>tuyo</strong>; no tenemos acceso. Apple lo gestiona según su política.</p>
+
+  <h3>4.3 Funciones de IA (Foto / Voz / Búsqueda con IA)</h3>
+  <p>Funciones de IA opcionales:</p>
+  <ul>
+    <li><strong>Foto + IA</strong>: identifica alimentos por foto</li>
+    <li><strong>Voz + IA</strong>: registra comida por audio</li>
+    <li><strong>Búsqueda con IA</strong>: encuentra alimentos fuera de la base local</li>
+    <li><strong>OCR de etiqueta</strong>: extrae info nutricional de empaques</li>
+  </ul>
+  <p>Para usar IA, proporcionas tu propia clave de uno de los proveedores soportados:</p>
+  <ul>
+    <li>Google Gemini (<a href="https://aistudio.google.com/apikey">aistudio.google.com</a>)</li>
+    <li>Anthropic Claude (<a href="https://console.anthropic.com/settings/keys">console.anthropic.com</a>)</li>
+    <li>OpenAI (<a href="https://platform.openai.com/api-keys">platform.openai.com</a>)</li>
+    <li>OpenRouter (<a href="https://openrouter.ai/keys">openrouter.ai</a>)</li>
+  </ul>
+  <p>Cuando usas IA:</p>
+  <ul>
+    <li>Tu imagen/voz/texto va <strong>directamente del dispositivo al proveedor elegido</strong> vía HTTPS</li>
+    <li><strong>Nunca pasa por nuestro servidor</strong> (no tenemos uno)</li>
+    <li><strong>No almacenamos</strong> la imagen o texto después del procesamiento</li>
+    <li>La API key se guarda en el <strong>Keychain cifrado</strong> de tu iPhone</li>
+  </ul>
+  <p>Cada proveedor de IA tiene su propia política de privacidad. Ver:</p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy">Google (Gemini)</a></li>
+    <li><a href="https://www.anthropic.com/privacy">Anthropic (Claude)</a></li>
+    <li><a href="https://openai.com/policies/row-privacy-policy/">OpenAI</a></li>
+    <li><a href="https://openrouter.ai/privacy">OpenRouter</a></li>
+  </ul>
+
+  <h2>5. Permisos iOS que la app solicita</h2>
+  <ul>
+    <li><strong>Cámara</strong>: tomar fotos de comidas (uso local + opcionalmente IA)</li>
+    <li><strong>Galería</strong>: elegir foto de biblioteca</li>
+    <li><strong>Micrófono</strong>: grabar voz</li>
+    <li><strong>Reconocimiento de voz</strong>: transcripción on-device (Apple)</li>
+    <li><strong>HealthKit</strong>: opcional, leer/escribir datos de salud</li>
+    <li><strong>Notificaciones</strong>: recordatorios de medicamentos</li>
+  </ul>
+  <p>Cada permiso se revoca en <code>Ajustes → NutriTrack BR</code>.</p>
+
+  <h2>6. Compras dentro de la app (Premium)</h2>
+  <p>Premium se vende vía <strong>StoreKit (App Store)</strong>. No procesamos pagos; toda transacción es gestionada por Apple. No tenemos acceso a tus datos de pago.</p>
+
+  <h2>7. Niños</h2>
+  <p>La app no está dirigida a menores de 13 años. No recopilamos datos de niños intencionalmente.</p>
+
+  <h2>8. Cambios en esta política</h2>
+  <p>Las actualizaciones se publican en esta página y cambia la fecha de "Última actualización". En cambios significativos, avisamos vía update de la app.</p>
+
+  <h2>9. Contacto</h2>
+  <p>Dudas sobre privacidad: <a href="mailto:dev@coachecom.com">dev@coachecom.com</a>.</p>
+
+</body>
+</html>
