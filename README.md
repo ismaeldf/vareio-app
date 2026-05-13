@@ -4,7 +4,7 @@ Site estático hospedado via GitHub Pages com:
 
 - **[Política de Privacidade](privacy.html)** (PT/EN/ES)
 - **[Termos de Uso](terms.html)** (PT/EN/ES)
-- **Suporte**: dev@coachecom.com
+- **Suporte**: vareioapp@gmail.com
 
 ## URLs Públicas (após GitHub Pages habilitado)
 
