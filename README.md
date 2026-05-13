@@ -1,4 +1,4 @@
-# NutriTrack BR — Legal & Support
+# Vareio — Legal & Support
 
 Site estático hospedado via GitHub Pages com:
 
@@ -8,9 +8,9 @@ Site estático hospedado via GitHub Pages com:
 
 ## URLs Públicas (após GitHub Pages habilitado)
 
-- Home: `https://ismaeldf.github.io/nutritrack-legal/`
-- Privacy: `https://ismaeldf.github.io/nutritrack-legal/privacy.html`
-- Terms: `https://ismaeldf.github.io/nutritrack-legal/terms.html`
+- Home: `https://ismaeldf.github.io/vareio-app/`
+- Privacy: `https://ismaeldf.github.io/vareio-app/privacy.html`
+- Terms: `https://ismaeldf.github.io/vareio-app/terms.html`
 
 Cadastrar essas URLs no App Store Connect (Privacy Policy URL + Support URL) e dentro do app (LegalView).
 
