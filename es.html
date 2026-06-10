@@ -127,7 +127,7 @@
       <p class="hero-sub">Calorías, macros, <b>micronutrientes</b>, ayuno, agua y <b>medicamentos</b> en una sola app — con una nota diaria que te motiva a mejorar.</p>
       <div class="hero-cta">
         <a href="https://apps.apple.com/app/id6769094756"><img src="assets/img/badge-appstore-es.png" alt="Descárgalo en el App Store"></a>
-        <span class="hero-note">8 días gratis de todo · después <span data-price>MXN&nbsp;69</span>/año · sin cuenta</span>
+        <span class="hero-note">8 días gratis de todo · después <span data-price>US$&nbsp;6.99</span>/año · sin cuenta</span>
       </div>
     </div>
     <div class="phone"><img src="assets/img/screen-diario.png" alt="Diario de Vareio: calorías, Vareio Score, macros, hidratación y medicamentos"></div>
@@ -238,11 +238,11 @@
   <div class="glow"></div>
   <div class="wrap">
     <h2>Empieza hoy.<br><span class="alt">8 días gratis.</span></h2>
-    <p>Todo desbloqueado por 8 días, sin registro y sin tarjeta. Después, sigue en el plan gratuito o suscríbete a Vareio Premium por <b><span data-price>MXN&nbsp;69</span>/año</b>.</p>
+    <p>Todo desbloqueado por 8 días, sin registro y sin tarjeta. Después, sigue en el plan gratuito o suscríbete a Vareio Premium por <b><span data-price>US$&nbsp;6.99</span>/año</b>.</p>
     <div class="hero-cta" style="margin-top:34px">
       <a href="https://apps.apple.com/app/id6769094756"><img src="assets/img/badge-appstore-es.png" alt="Descárgalo en el App Store"></a>
     </div>
-    <p class="smallprint">Precio del App Store de México; puede variar según el país. Vareio Premium es una suscripción anual de renovación automática, cargada a tu cuenta de Apple. Se renueva salvo cancelación al menos 24 h antes del fin del período; gestiónala en los ajustes del App Store. ·
+    <p class="smallprint">Precio del App Store de EE.&nbsp;UU.; puede variar según el país. Vareio Premium es una suscripción anual de renovación automática, cargada a tu cuenta de Apple. Se renueva salvo cancelación al menos 24 h antes del fin del período; gestiónala en los ajustes del App Store. ·
       <a href="terms.html?lang=es">Términos de Uso</a> ·
       <a href="privacy.html?lang=es">Política de Privacidad</a></p>
   </div>
@@ -277,10 +277,11 @@
 
   // Precio embutido en el HTML como fallback; el fetch lee assets/prices.json
   // (regenerado de App Store Connect vía Marketing/update_prices.py).
-  // currencyDisplay 'code' (MXN) pra não confundir "$" com dólar na página ES.
+  // Página ES usa o preço dos EUA em dólar (público hispânico é multi-país;
+  // USD é a referência universal). es-MX + USD formata como "US$6.99".
   fetch('assets/prices.json').then(r => r.json()).then(d => {
-    const p = d.prices && d.prices.MX; if (!p) return;
-    const f = new Intl.NumberFormat('es-MX', { style: 'currency', currency: p.currency, currencyDisplay: 'code' });
+    const p = d.prices && d.prices.US; if (!p) return;
+    const f = new Intl.NumberFormat('es-MX', { style: 'currency', currency: p.currency });
     document.querySelectorAll('[data-price]').forEach(el => { el.textContent = f.format(p.amount); });
   }).catch(() => {});
 </script>
