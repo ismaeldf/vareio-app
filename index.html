@@ -117,6 +117,7 @@
   .cta h2{font-size:clamp(38px,5.6vw,64px);text-transform:uppercase}
   .cta h2 .alt{color:var(--accent)}
   .cta p{color:var(--muted);margin:18px auto 0;max-width:460px;font-size:16px;line-height:1.6}
+  .cta p b{color:#fff}
   .cta .hero-cta{justify-content:center}
   .smallprint{margin:34px auto 0;max-width:560px;color:#5d666d;font-size:12px;line-height:1.6}
   .smallprint a{color:#8a939b;text-decoration:underline}
@@ -290,11 +291,11 @@
   <div class="glow"></div>
   <div class="wrap">
     <h2>Comece hoje.<br><span class="alt">8 dias grátis.</span></h2>
-    <p>Tudo liberado por 8 dias, sem cadastro e sem cartão. Depois, continue no plano gratuito ou assine o Vareio Premium anual.</p>
+    <p>Tudo liberado por 8 dias, sem cadastro e sem cartão. Depois, continue no plano gratuito ou assine o Vareio Premium por <b><span data-price>R$&nbsp;19,90</span>/ano</b>.</p>
     <div class="hero-cta" style="margin-top:34px">
       <a href="https://apps.apple.com/app/id6769094756"><img src="assets/img/badge-appstore-pt.png" alt="Baixar na App Store"></a>
     </div>
-    <p class="smallprint">O Vareio Premium é uma assinatura anual com renovação automática, cobrada na sua conta Apple. Renova salvo cancelamento até 24h antes do fim do período; gerencie nos ajustes da App Store. ·
+    <p class="smallprint">Preço da App Store do Brasil; pode variar por país. O Vareio Premium é uma assinatura anual com renovação automática, cobrada na sua conta Apple. Renova salvo cancelamento até 24h antes do fim do período; gerencie nos ajustes da App Store. ·
       <a href="terms.html">Termos de Uso</a> ·
       <a href="privacy.html">Política de Privacidade</a></p>
   </div>
@@ -318,6 +319,16 @@
     es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: .18 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Preço: o valor atual já vem embutido no HTML (fallback). Este fetch lê o
+  // assets/prices.json — regenerado da App Store Connect via
+  // Marketing/update_prices.py — pra página atualizar sozinha quando o preço
+  // mudar, sem editar HTML. (A Apple não tem API pública de preço de assinatura.)
+  fetch('assets/prices.json').then(r => r.json()).then(d => {
+    const p = d.prices && d.prices.BR; if (!p) return;
+    const f = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: p.currency });
+    document.querySelectorAll('[data-price]').forEach(el => { el.textContent = f.format(p.amount); });
+  }).catch(() => {});
 </script>
 
 </body>
