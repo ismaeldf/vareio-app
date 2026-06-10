@@ -1,34 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Termos de Uso — Vareio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vareio — Termos de Uso</title>
 <style>
-  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;max-width:720px;margin:48px auto;padding:0 20px;color:#222;line-height:1.6}
-  h1{font-size:28px;margin-bottom:4px}
-  h2{font-size:20px;margin-top:32px;color:#0c8e60}
-  h3{font-size:16px;margin-top:20px}
-  a{color:#0c8e60}
-  ul{padding-left:18px}
-  li{margin-bottom:6px}
-  .lang{display:flex;gap:12px;margin-bottom:8px;font-size:13px}
-  .lang a{padding:4px 10px;border-radius:6px;background:#f0f0f0;text-decoration:none}
-  .meta{color:#888;font-size:13px;margin-bottom:32px}
-  hr{margin:48px 0;border:0;border-top:2px solid #eee}
-  .warning{background:#fff8e1;padding:16px;border-radius:10px;border-left:4px solid #ff9800;margin:16px 0}
+  /* Página legal no mesmo formato escuro da landing (estilo Kiff).
+     Conteúdo extraído 1:1 das páginas oficiais do GitHub Pages —
+     só o "casco" visual muda; o texto legal é o mesmo. */
+  :root{
+    --bg:#000; --ink:#fff; --muted:#b6bec5;
+    --accent:#2be0a2; --card:#0d0f10; --line:#1d2125;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1080px;margin:0 auto;padding:0 24px}
+  .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:18px;text-decoration:none}
+  .brand img{width:30px;height:30px;border-radius:8px}
+  .brand b{font-weight:inherit} /* wordmark como 1 flex item — gap não separa "Vare" do "io" */
+  .brand span{color:var(--accent)} /* "io" verde da marca */
+  .lang-sw{display:flex;gap:4px}
+  .lang-sw button{color:#9aa3ab;background:none;border:1px solid transparent;font-weight:800;font-size:12.5px;padding:6px 11px;border-radius:8px;cursor:pointer;font-family:inherit}
+  .lang-sw button.on{color:#fff;border-color:var(--line);background:var(--card)}
+  main{padding:64px 0 80px}
+  article{display:none}
+  article.on{display:block}
+  h1{font-size:clamp(34px,5.5vw,52px);font-weight:900;letter-spacing:-.02em;line-height:1.05;margin-bottom:8px}
+  .meta{color:#717a82;font-size:13.5px;margin-bottom:34px}
+  h2{font-size:21px;font-weight:800;margin:38px 0 12px;color:#fff}
+  h3{font-size:16.5px;font-weight:800;margin:26px 0 10px;color:#e8ecef}
+  p{color:var(--muted);font-size:15.5px;line-height:1.7;margin:12px 0}
+  ul,ol{padding-left:22px;margin:12px 0}
+  li{color:var(--muted);font-size:15.5px;line-height:1.7;margin:7px 0}
+  strong{color:#fff}
+  code{background:#15181a;border:1px solid var(--line);padding:1px 6px;border-radius:6px;font-size:90%;color:#d3dade}
+  .highlight,.warning{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:14px 18px;margin:18px 0}
+  .highlight{border-color:rgba(43,224,162,.35)}
+  .warning{border-color:rgba(255,170,60,.35)}
+  hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+  footer{border-top:1px solid var(--line);padding:30px 0;background:#050606}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;max-width:1080px;margin:0 auto;padding:0 24px;font-size:13px}
+  .foot a{color:#9aa3ab;text-decoration:none;font-weight:600;margin-right:18px}
+  .foot a:hover{color:#fff}
+  .foot small{color:#4d555c;font-size:12px}
 </style>
 </head>
 <body>
-  <div class="lang">
-    <a href="index.html">← Início</a>
-    <a href="#ptbr">🇧🇷 PT-BR</a>
-    <a href="#en">🇺🇸 EN</a>
-    <a href="#es">🇪🇸 ES</a>
-  </div>
 
-  <a name="ptbr"></a>
-  <h1>Termos de Uso</h1>
+<nav>
+  <div class="nav-in">
+    <a class="brand" id="back-home" href="index.html"><img src="assets/img/logo.png" alt=""> <b>Vare<span>io</span></b></a>
+    <div class="lang-sw" role="tablist">
+      <button data-lang="pt">PT</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="es">ES</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+<article data-lang="pt" class="on">
+<h1>Termos de Uso</h1>
   <p class="meta">Vareio · Última atualização: 7 de junho de 2026</p>
 
   <div class="warning">
@@ -135,8 +170,11 @@
 
   <hr>
 
-  <a name="en"></a>
-  <h1>Terms of Service (English)</h1>
+  
+</article>
+
+<article data-lang="en">
+<h1>Terms of Service (English)</h1>
   <p class="meta">Vareio · Last updated: June 7, 2026</p>
 
   <div class="warning">
@@ -243,8 +281,11 @@
 
   <hr>
 
-  <a name="es"></a>
-  <h1>Términos de Uso (Español)</h1>
+  
+</article>
+
+<article data-lang="es">
+<h1>Términos de Uso (Español)</h1>
   <p class="meta">Vareio · Última actualización: 7 de junio de 2026</p>
 
   <div class="warning">
@@ -348,6 +389,39 @@
 
   <h2>14. Contacto</h2>
   <p>Dudas: <a href="mailto:vareioapp@gmail.com">vareioapp@gmail.com</a>.</p>
+</article>
+</main>
+
+<footer>
+  <div class="foot">
+    <span>
+      <a href="index.html" data-home>Início</a>
+      <a href="mailto:vareioapp@gmail.com">Suporte</a>
+    </span>
+    <small>© 2026 Vareio · Ismael DF</small>
+  </div>
+</footer>
+
+<script>
+  // Aba de idioma: ?lang=pt|en|es define o bloco visível; clique troca e
+  // atualiza a URL (sem reload). O link "Início" volta pra landing do idioma.
+  const HOMES = { pt: 'index.html', en: 'en.html', es: 'es.html' };
+  const valid = ['pt','en','es'];
+  function setLang(l, push) {
+    if (!valid.includes(l)) l = 'pt';
+    document.querySelectorAll('article[data-lang]').forEach(a =>
+      a.classList.toggle('on', a.dataset.lang === l));
+    document.querySelectorAll('.lang-sw button').forEach(b =>
+      b.classList.toggle('on', b.dataset.lang === l));
+    document.getElementById('back-home').href = HOMES[l];
+    document.querySelectorAll('[data-home]').forEach(a => a.href = HOMES[l]);
+    document.documentElement.lang = l === 'pt' ? 'pt-BR' : l;
+    if (push) history.replaceState(null, '', '?lang=' + l);
+  }
+  document.querySelectorAll('.lang-sw button').forEach(b =>
+    b.addEventListener('click', () => setLang(b.dataset.lang, true)));
+  setLang(new URLSearchParams(location.search).get('lang') || 'pt', false);
+</script>
 
 </body>
 </html>
