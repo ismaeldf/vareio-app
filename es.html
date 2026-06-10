@@ -18,6 +18,7 @@
   body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:var(--accent);text-decoration:none}
   img{display:block;max-width:100%}
+  video{display:block;width:100%} /* vídeo dentro da moldura .phone */
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
@@ -149,7 +150,7 @@
       <h2>Tu nota<br>del día.</h2>
       <p>Una nota de <b>0 a 100</b> de cómo comiste — fácil de entender, imposible de ignorar. Criterios y pesos ajustables a tus metas, y un <b>área de foco</b> que muestra exactamente dónde mejorar hoy.</p>
     </div>
-    <div class="media reveal"><div class="phone"><img src="assets/img/screen-score.png" alt="Vareio Score: anillo con nota y composición por criterios"></div></div>
+    <div class="media reveal"><div class="phone"><video src="assets/img/score.mp4" poster="assets/img/screen-score.png" autoplay muted loop playsinline aria-label="Vareio Score: anillo animando hasta la nota del día"></video></div></div>
   </div>
 </section>
 

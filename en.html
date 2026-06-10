@@ -17,6 +17,7 @@
   body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:var(--accent);text-decoration:none}
   img{display:block;max-width:100%}
+  video{display:block;width:100%} /* vídeo dentro da moldura .phone */
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
@@ -148,7 +149,7 @@
       <h2>Your daily<br>score.</h2>
       <p>A <b>0 to 100</b> score of how you ate — easy to read, impossible to ignore. Criteria and weights adjust to your goals, and a <b>focus area</b> shows exactly where to improve today.</p>
     </div>
-    <div class="media reveal"><div class="phone"><img src="assets/img-en/screen-score.png" alt="Vareio Score: ring with score 86 and composition by criteria"></div></div>
+    <div class="media reveal"><div class="phone"><video src="assets/img-en/score.mp4" poster="assets/img-en/screen-score.png" autoplay muted loop playsinline aria-label="Vareio Score: ring animating to the daily score"></video></div></div>
   </div>
 </section>
 
