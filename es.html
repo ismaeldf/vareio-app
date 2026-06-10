@@ -127,7 +127,7 @@
       <p class="hero-sub">Calorías, macros, <b>micronutrientes</b>, ayuno, agua y <b>medicamentos</b> en una sola app — con una nota diaria que te motiva a mejorar.</p>
       <div class="hero-cta">
         <a href="https://apps.apple.com/app/id6769094756"><img src="assets/img/badge-appstore-es.png" alt="Descárgalo en el App Store"></a>
-        <span class="hero-note">8 días gratis de todo · sin cuenta</span>
+        <span class="hero-note">8 días gratis de todo · después <span data-price>MXN&nbsp;69</span>/año · sin cuenta</span>
       </div>
     </div>
     <div class="phone"><img src="assets/img/screen-diario.png" alt="Diario de Vareio: calorías, Vareio Score, macros, hidratación y medicamentos"></div>
@@ -150,7 +150,7 @@
       <h2>Tu nota<br>del día.</h2>
       <p>Una nota de <b>0 a 100</b> de cómo comiste — fácil de entender, imposible de ignorar. Criterios y pesos ajustables a tus metas, y un <b>área de foco</b> que muestra exactamente dónde mejorar hoy.</p>
     </div>
-    <div class="media reveal"><div class="phone"><video src="assets/img/score.mp4" poster="assets/img/screen-score.png" autoplay muted loop playsinline aria-label="Vareio Score: anillo animando hasta la nota del día"></video></div></div>
+    <div class="media reveal"><div class="phone"><video src="assets/img/score.mp4" poster="assets/img/screen-score.png" muted playsinline preload="none" aria-label="Vareio Score: anillo animando hasta la nota del día"></video></div></div>
   </div>
 </section>
 
@@ -265,6 +265,15 @@
     es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: .18 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Videos en las molduras: sin loop/autoplay — arrancan al entrar en pantalla.
+  document.querySelectorAll('.phone video').forEach(v => {
+    const vio = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { v.currentTime = 0; v.play().catch(() => {}); }
+      else { v.pause(); }
+    }), { threshold: .5 });
+    vio.observe(v);
+  });
 
   // Precio embutido en el HTML como fallback; el fetch lee assets/prices.json
   // (regenerado de App Store Connect vía Marketing/update_prices.py).
