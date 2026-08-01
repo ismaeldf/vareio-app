@@ -32,6 +32,12 @@
   .lang-sw a.on{color:#fff;border-color:var(--line);background:var(--card)}
   .btn-pill{background:var(--accent);color:#022d1e;font-weight:800;padding:9px 18px;border-radius:999px;font-size:14px;transition:transform .15s ease, box-shadow .15s ease}
   .btn-pill:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(43,224,162,.35)}
+  /* Botão do canal no YouTube — ícone em vez de texto pra continuar visível no
+     mobile (os links .plain somem abaixo de 820px). Vermelho da marca pra ser
+     reconhecido de imediato, sem competir com o CTA verde de download. */
+  .nav-links a.yt{display:inline-flex;align-items:center;color:#FF0033;line-height:0;transition:transform .15s ease, filter .15s ease}
+  .nav-links a.yt:hover{transform:translateY(-1px);filter:drop-shadow(0 6px 18px rgba(255,0,51,.45))}
+  .nav-links a.yt svg{width:27px;height:27px;display:block}
   .hero{position:relative;padding:84px 0 40px;overflow:hidden}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center}
   h1{font-size:clamp(56px,9.5vw,118px);line-height:.92;font-weight:900;letter-spacing:-.03em;text-transform:uppercase}
@@ -98,6 +104,12 @@
     .feat-grid.flip .copy{order:2}
     section.feature{padding:64px 0}
     .nav-links a.plain{display:none}
+    /* Espaço apertado no mobile: sem isso a nav estoura e o seletor de
+       idioma cobre a marca. Ícone e gaps encolhem pra tudo caber. */
+    .nav-links{gap:12px}
+    .nav-links a.yt svg{width:23px;height:23px}
+    .lang-sw{gap:2px;margin-right:0}
+    .lang-sw a{padding:4px 7px}
   }
 </style>
 </head>
@@ -112,6 +124,7 @@
       </div>
       <a class="plain" href="mailto:vareioapp@gmail.com">Support</a>
       <a class="plain" href="privacy.html?lang=en">Privacy</a>
+      <a class="yt" href="https://www.youtube.com/@vareio-app" target="_blank" rel="noopener" aria-label="Vareio channel on YouTube" title="YouTube channel"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.08 0 12 0 12s0 3.92.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.81ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z"/></svg></a>
       <a class="btn-pill" href="https://apps.apple.com/app/id6769094756">Download</a>
     </div>
   </div>
