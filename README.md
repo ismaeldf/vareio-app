@@ -1,4 +1,4 @@
-# Vareio — Legal & Support
+# Vareio Nutri — Legal & Support
 
 Site estático hospedado via GitHub Pages com:
 
